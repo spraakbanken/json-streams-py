@@ -7,7 +7,7 @@ from . import utils
 
 
 def choose_iter(name, json_format):
-    if json_format == "jsonl" or utils.is_jsonl(name):
+    if json_format == "jsonl" or name is None or utils.is_jsonl(name):
         return jsonl_iter
     return json_iter
 
