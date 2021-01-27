@@ -45,7 +45,7 @@ ${VENV_NAME}/dev.installed: setup.py setup.cfg requirements.txt
 	${INVENV} python -m pip install -Ue .[dev]
 	@touch $@
 
-update-pip: venv
+upgrade-pip: venv
 	${INVENV} python -m pip install --upgrade pip
 
 install-dev: venv ${VENV_NAME}/dev.installed
